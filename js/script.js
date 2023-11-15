@@ -18,26 +18,21 @@
 //     addeventlistner -> click
 //     event.preventdefault()
 
-function lancerdés() {
+function lancerdés() 
+{
 
     const nombrealeatoire = Math.floor(Math.random() * 6) + 1;
-    const désImage = document.getElementById("img/dé");
-    désImage.src = "img/dé" + nombrealeatoire + ".png";
+    const déImage = document.getElementById("img/dé");
+    déImage.src = "img/dé" + nombrealeatoire + ".png";
 
-    if (nombrealeatoire >= 1) {
-        console.log ("Resultat du lancer : " + nombrealeatoire);
-        }
-    else{
+    console.log ("Resultat du lancer : " + nombrealeatoire);
 
-        }
-    if (nombrealeatoire>=6 ) {
-        
-    }
-
-
-
-
-
+    
+    // const typededé = document.querySelector('input[name="diceType"]:checked');
+    // const nombrea12 = Math.floor (Math.random() * 12) + 1;
+    // const déImages = document.getElementById('img/dé');
+    // déImages.src = 'img/dé' + typededé + '.png';
+    // console.log ("Resultat du lancer : " + nombrea12);
 
 
 }
@@ -45,3 +40,7 @@ function lancerdés() {
 // Mettre à jour l'image du dé en fonction du résultat
 // Afficher le résultat dans la console
 
+
+// Récupérer la valeur sélectionnée du type de dé
+// Générer un nombre aléatoire entre 1 et le nombre de faces sélectionné
+// Changer la source de l'image en fonction du résultat du dé
