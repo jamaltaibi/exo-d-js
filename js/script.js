@@ -10,6 +10,48 @@
 // Récupérer dans la console un nombre aléatoire entre 1 et 6
 // Adapter votre changement de source d'image par rapport au résultat du random (if)
 
+// Générer un nombre aléatoire entre 1 et 6
+// demander si 
+// Mettre à jour l'image du dé en fonction du résultat
+// Afficher le résultat dans la console
+
+// Solution de Base:
+// function lancerdés()
+// {
+//     const imgselect = document.querySelector(".imgdé")
+//     let nombrealeatoire = Math.floor(Math.random() * 6) + 1;
+//     console.log(nombrealeatoire)
+
+//     if (nombrealeatoire== 1){
+//         imgselect.src = "img/dé1.png";
+//     }
+//     if (nombrealeatoire == 2){
+//         imgselect.src = "img/dé2.png";;
+//     }
+//     if (nombrealeatoire == 3){
+//         imgselect.src = "img/dé3.png";
+//     }
+//     if (nombrealeatoire == 4){
+//         imgselect.src = "img/dé4.png";
+//     }
+//     if (nombrealeatoire == 5){
+//         imgselect.src = "img/dé5.png";
+//     }
+//     if (nombrealeatoire == 6){
+//         imgselect.src = "img/dé6.png";
+//     }
+// }
+
+// Solution Optimisée:
+// function lancerdés() 
+// {
+//     const nombrealeatoire = Math.floor(Math.random()* 6)+ 1;
+//     const déImage = document.querySelector(".imgdé");
+//     déImage.src = "img/dé" + nombrealeatoire + ".png";
+
+//     console.log ("Resultat du lancer : " + nombrealeatoire);
+// }
+
 // Bonus :
 // Utilisez les inputs de type radio pour sélectionner 
 // le nombre de face (6, 12 ou 20). Lors d'un click sur un bouton, 
@@ -18,27 +60,47 @@
 //     addeventlistner -> click
 //     event.preventdefault()
 
-function lancerdés() 
-{
+// Solution de base :
+let typeDe
+const lancerUnDe = document.querySelector('.lancerdés');
 
-    const nombrealeatoire = Math.floor(Math.random() * 6) + 1;
-    const déImage = document.getElementById("img/dé");
-    déImage.src = "img/dé" + nombrealeatoire + ".png";
-
-    console.log ("Resultat du lancer : " + nombrealeatoire);
-
+lancerUnDe.addEventListener('mouseover', (event) => {
+    event.preventDefault();
     
-    // const typededé = document.querySelector('input[name="diceType"]:checked');
-    // const nombrea12 = Math.floor (Math.random() * 12) + 1;
-    // const déImages = document.getElementById('img/dé');
-    // déImages.src = 'img/dé' + typededé + '.png';
-    // console.log ("Resultat du lancer : " + nombrea12);
+let deRadio = document.getElementsByName('typededé');
+
+    for(let i = 0; i < deRadio.length; i++){
+    if(deRadio[i].checked){
+        typeDe = deRadio[i].value;
+    }
+    }
+
+let nombre = Math.floor(Math.random()*typeDe +1)  
+
+    if (de6.checked){
+        de.src = "img/dé6.png"
+    }
+    if (de12.checked){
+        de.src = "img/dé12.png"
+    }
+    if (de20.checked){
+        de.src = "img/dé20.png"
+    }
+    
+const selectP = document.querySelector('.nombreDe');
+    selectP.textContent = nombre
+ 
+    console.log(nombre)
+})
 
 
-}
-// Générer un nombre aléatoire entre 1 et 6
-// Mettre à jour l'image du dé en fonction du résultat
-// Afficher le résultat dans la console
+// function lancerdés() 
+// {
+//     const nombrealeatoire = Math.floor(Math.random() * 6) + 1;
+//     const déImage = document.querySelector(".img/dé1");
+//     déImage.src = ".img/dé" + nombrealeatoire + ".png";
+//     console.log ("Resultat du lancer : " + nombrealeatoire);
+// }
 
 
 // Récupérer la valeur sélectionnée du type de dé

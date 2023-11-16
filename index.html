@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lanceur de dés</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="jeuxdedés">
-        <img id="img/dé" src="img/dé1.png" alt="Dé à 6 faces">
-    </div>
 
-    <div>
-        <input type="radio" id="déa6faces" name="typededé" value="6"/> Dé à 6 faces
-    </div>
+    <img class="imgdé" src="img/dé1.png" alt="">
 
-    <div>
-        <input type="radio" id="déa12faces" name="typededé" value="12"/> Dé a 12 faces
-    </div>
+    <form >
 
-    <div>
-        <input type="radio" id="déa20faces" name="typededé" value="20"/>Dé a 20 faces
-    </div>
+        <input type="radio" id="déa6faces" name="typededé" value="6" checked/> 
+        <label for="déa6faces">Dé 6 faces </label>
+
+        <input type="radio" id="déa12faces" name="typededé" value="12"/> 
+        <label for="déa12faces">Dé 12 faces</label>
+
+        <input type="radio" id="déa20faces" name="typededé" value="20"/>
+        <label for="déa20faces">Dé 20 faces</label>
+
+        <button class="lancerdés()">Lancer le dé</button>
+    </form>
 
 
-    <button onclick="lancerdés()">Lancer le dé</button>
+    <!-- <button class="lancerdés()">Lancer le dé</button> -->
     <script src="js/script.js"></script>
 </body>
 </html>
+<!-- <body>
+
+    <form>
+        <input type="radio" name="de" id="de6" value="6"  checked/>
+        <label for="de6">Dé 6</label>
+
+        <input type="radio" name="de" value="12" id="de12"  />
+        <label for="de12">Dé 12</label>
+
+        <input type="radio" name="de" value="20" id="de20" />
+        <label for="de20">Dé 20</label>
+
+        <button class="lancerUnDe">Lancer le dé</button>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html> -->
